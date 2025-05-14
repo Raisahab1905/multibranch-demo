@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Main Build') {
+        stage('Hotfix Build') {
             steps {
-                echo "Building the main branch"
+                echo "Building hotfix-crash branch"
             }
         }
-        stage('Deploy') {
+        stage('Quick Test') {
             steps {
-                echo "Deploying main branch to production"
+                echo "Running minimal tests for hotfix"
             }
         }
     }
